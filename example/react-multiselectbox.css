@@ -1,0 +1,240 @@
+.containerMultiSelectBox {
+  display: flex; /* Flexbox to align divs on the row */
+  gap: 1px; /* Space btw divs */
+}
+
+
+.notVisible{
+  display: none; 
+}
+
+:root {
+  --light-gray-lines: #dcdcdc; /* color variable definition */
+}
+
+.link_clear{
+  cursor: pointer;
+  color: #008BBF;
+  text-decoration: none;
+}
+
+.searchField
+{
+  background-image: url('../search.png');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%!important;
+  width: 100%;
+  background-size: 15px 15px;
+  border: 0px solid #D3D3D3;
+  font-size: 13px;
+  color: #5c6166;
+}
+
+.searchField:focus {
+  outline: none; /* Removes the blue border or default focus outline */
+  box-shadow: none; /* Removes any additional focus effects */
+
+}
+
+.buttonDelete {
+    line-height: normal;
+    box-sizing: border-box;
+    background-color: buttonface;
+    border: 1px solid #cacaca;
+    border-image: initial;
+    width:fit-content !important;
+    border-radius: 5px;
+}
+
+.buttonDelete:hover {
+  cursor: pointer;
+}
+
+.buttonDelete:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 5px rgba(125, 130, 134, 0.5); /* Optional: Adds a soft glow effect */
+}
+
+.itemsListScrollDropDown{
+  position: absolute; /* Floats relative to the parent box */
+  top: 100%; /* Positions it below the box */
+  left: 0; /* Aligns with the left edge of the parent */
+  width: 100%; /* Ensures it matches the width of the parent (box1) */
+  /*max-height: 200px; /* Sets a maximum height for scrolling */
+  /*overflow-y: auto; /* Enables vertical scrolling */
+  background-color: white; /* Matches the background with the box */
+  /*border: 1px solid #ddd; /* Adds a border for visual separation */
+  outline: 1px solid #ddd;
+  z-index: 10; /* Ensures it appears in front of other content */
+  padding: 0px; /* Spacing inside the list */
+}
+
+.itemsListScroll{
+  height: 250px;
+  overflow: auto;
+  background-color: white;
+}
+
+.itemsListScrollRight{
+  height: 280px;
+  overflow: auto;
+  background-color: white;
+}
+
+.noItemsToList{
+  color: gray;
+  align-content: center;
+  justify-content: center;
+  display: grid;
+}
+
+.inheritHeight{
+  height: inherit;
+}
+
+.itemsListScrollMore{
+  height: 283px;
+  overflow: auto;
+}
+
+.paintGray{
+  background-color: #F7F7F7;
+}
+
+.paintWhite{
+  background-color: #fff;
+}
+
+/* Scroll-bar styles */
+
+.itemsListScroll::-webkit-scrollbar, .itemsListScrollRight::-webkit-scrollbar, .itemsListScrollMore::-webkit-scrollbar,
+.itemsListScrollDropDown::-webkit-scrollbar, .itemsListScrollDropDown::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--light-gray-lines); 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1d1; 
+  border-radius: 30px;
+}
+
+
+.selectAllLine{
+  border-bottom: 1px solid var(--light-gray-lines);
+  background-color: #F7F7F7;
+}
+
+.firstline{
+  padding: 6px;
+  border-bottom: 1px solid var(--light-gray-lines);
+  background-color: #fff;
+  height:20px;
+}
+
+.leftDivs{
+  display: flex;
+  align-items: center;
+}
+
+.rightDivs a {
+  justify-self: end; /* Aligns the text to the right */
+}
+
+.rightDivs{
+  display: inline-grid;
+  width: 50%;
+  align-items: center;
+}
+
+.boxDropDown {
+  position: relative; /* Required for the floating child to align relative to this */
+  width: 100%; /* Ensure the box width is controlled */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  padding: 0px;
+}
+
+.box {
+  flex: 1;
+  text-align: left;
+  border-radius: 0px;
+  border: 1px solid var(--light-gray-lines);
+}
+
+.delete-div {
+  display: flex;
+  align-items: center; /* Aligns the label and button vertically */
+}
+
+.items {
+  padding: 5px;
+}
+
+
+.items:hover {
+  background-color: #f3f3f3; /* Change color on mouseover */
+}
+
+.itemlabel{
+  display: flex;
+  width: 100%; /* entire width of the div */
+  cursor: pointer;
+}
+
+/*checkboxs CSS*/
+
+/* Custom checkbox style */
+.checkbox-custom {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #777;
+  border-radius: 4px; /* rounded edge  */
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.itemlabeldisabled{
+  color: #989899;
+  cursor:auto;
+}
+
+/* Style when checkbox is checked */
+input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #3F51B5;
+  border-color: #3F51B5;
+  margin-right: 10px;
+}
+
+/* Style when checkbox is disabled */
+input[type="checkbox"]:disabled + .checkbox-custom {
+  background-color: #B7B7B7;
+  border-color: #B7B7B7;
+  margin-right: 10px;
+}
+
+/* check Icon */
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show check when checkbox is checked */
+input[type="checkbox"]:checked + .checkbox-custom:after {
+  opacity: 1;
+}
