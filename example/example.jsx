@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 // REACT & REDUX
 import ReactDOM from 'react-dom/client'; 
-import MultiSelectBox   from '../react-multiselectbox.jsx';
+//import MultiSelectBox   from '../react-multiselectbox.jsx';
+import MultiSelectBox   from '../dist/react-multiselectbox.js';
 
 import './react-multiselectbox.css'
 
@@ -42,6 +43,7 @@ export const MultiSelectTest = () => {
                     //className="text-field" 
                     //locale="en"
                     //clearable = {true}
+                    autoComplete={"off"}
                     displayAsDropdown={false}
                     placeholder= {"Search..."}
                     //onChange={value => handleNumberOnChange(value)}
@@ -55,6 +57,7 @@ export const MultiSelectTest = () => {
                     disabled={false}
 					options={ optionList }
 					selectedItems={ optionList2 }
+                    autoComplete={"off"}
                     displayAsDropdown={true}
                     value={inputValue}
                     placeholder= {"Search..."}

@@ -22,5 +22,6 @@ If you want to do developement:
 
 ### [Changelog](CHANGELOG.md)
 1.0.1 Add externals section to webpack due to issue when use the dist js
+1.0.2 Changing autoComplete to "off" instead of False (warning fixed)
 
 ### [MIT Licensed](LICENSE.md)
