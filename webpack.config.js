@@ -10,7 +10,11 @@ var config = {
     filename: "react-multiselectbox.js",
     libraryTarget: "umd",
     umdNamedDefine: true,
-  },
+    },
+    externals: {
+      'react': 'react',
+      'prop-types': 'prop-types',
+    },
   module: {
     rules: [
       {

@@ -15,7 +15,7 @@ const MultiSelectBox = ({
     onBlur,
     onFocus,
     autoFocus,
-    autoComplete,
+    autoComplete = false,
 	displayAsDropdown = false,
 }) => {
     let [searchValue, setSearchValue] = useState("")

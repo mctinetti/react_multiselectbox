@@ -2,6 +2,10 @@
 
 A React multiselect box, it can also be a dropdown by parametrization.
 
+## Use
+1. npm install "@mctinetti/react-multiselectbox"
+2. import as follow:  import MultiSelectBox from '@mctinetti/react-multiselectbox';
+
 ## Build for prod
 1. copy myapp\react-multiselectbox
 2. cd \react-multiselectbox
@@ -17,5 +21,6 @@ If you want to do developement:
 5. npx webpack serve
 
 ### [Changelog](CHANGELOG.md)
+1.0.1 Add externals section to webpack due to issue when use the dist js
 
 ### [MIT Licensed](LICENSE.md)
